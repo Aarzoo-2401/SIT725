@@ -9,7 +9,7 @@ app.get("/", (req, res) => {
   res.send("Welcome to my Express server!");
 });
 
-// Endpoint to add two numbers
+// Addition Endpoint
 app.get("/add", (req, res) => {
   let num1 = parseFloat(req.query.num1);
   let num2 = parseFloat(req.query.num2);
@@ -19,7 +19,33 @@ app.get("/add", (req, res) => {
   }
 
   let sum = num1 + num2;
-  res.json({res: `The sum of ${num1} and ${num2} is ${sum}`});
+  res.json({ res: `The sum of ${num1} and ${num2} is ${sum}` });
+});
+
+// Subtraction Endpoint
+app.get("/subtract", (req, res) => {
+  let num1 = parseFloat(req.query.num1);
+  let num2 = parseFloat(req.query.num2);
+
+  if (isNaN(num1) || isNaN(num2)) {
+    return res.status(400).send("Invalid numbers provided");
+  }
+
+  let difference = num1 - num2;
+  res.json({ res: `The difference of ${num1} and ${num2} is ${difference}` });
+});
+
+// Multiplication Endpoint
+app.get("/multiply", (req, res) => {
+  let num1 = parseFloat(req.query.num1);
+  let num2 = parseFloat(req.query.num2);
+
+  if (isNaN(num1) || isNaN(num2)) {
+    return res.status(400).send("Invalid numbers provided");
+  }
+
+  let product = num1 * num2;
+  res.json({ res: `The product of ${num1} and ${num2} is ${product}` });
 });
 
 // Start the server
