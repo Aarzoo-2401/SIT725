@@ -1,4 +1,4 @@
-navbar-size {
+.navbar-size {
     width: 95%;
     margin: 0 auto;
     }
@@ -6,6 +6,7 @@ navbar-size {
     height: 56px;
     margin: 4px 0;
     }
+    
     .main-body {
     background-color: #F28487;
     color: white;

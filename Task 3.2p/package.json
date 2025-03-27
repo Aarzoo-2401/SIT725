@@ -1,23 +1,22 @@
 {
-  "name": "Task-3.2p",
+  "name": "task-3.2p",
   "version": "1.0.0",
-  "description": "",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
   },
   "keywords": [
-  "Nodejs",
-  "Express",
-  "Materialize",
-  "HTML",
-  "JS",
-  "CSS"
+    "Nodejs",
+    "Express",
+    "Materialize",
+    "HTML",
+    "JS",
+    "CSS"
   ],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "express": "^4.21.2"
-  }
+  },
+  "description": ""
 }
- 
