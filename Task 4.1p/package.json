@@ -1,14 +1,23 @@
 {
   "name": "task-4.1p",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js"
   },
+  "keywords": [
+    "Nodejs",
+    "Express",
+    "Materialize",
+    "HTML",
+    "JS",
+    "CSS"
+  ],
   "author": "",
   "license": "ISC",
-  "description": "",
   "dependencies": {
-    "express": "^4.21.2"
-  }
+    "express": "^4.21.2",
+    "mongoose": "^8.13.1"
+  },
+  "description": ""
 }
