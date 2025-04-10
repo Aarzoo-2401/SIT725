@@ -1,15 +1,15 @@
-const { projectController } = require('../controllers');
-const { Project } = require('../models');
+// services/projectService.js
+const Project = require('../models/projectModel');
 
-/**
- * This method is responsible to either get all the users form
- * @param {*} userId
- */
-
-const projectService = {
-    getAllProjects: async()=>{
-        return await Project.find();
+// Function to get all projects
+const getAllProjects = async () => {
+    try {
+        return await Project.find({});
+    } catch (error) {
+        throw new Error('Error fetching projects');
     }
-}
+};
 
-module.exports = projectService
+module.exports = {
+    getAllProjects,
+};
