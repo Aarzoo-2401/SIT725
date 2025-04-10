@@ -1,4 +1,4 @@
-/*
+
 
 // services/projectService.js
 const Project = require('../models/projectModel');
@@ -16,7 +16,7 @@ module.exports = {
     getAllProjects,
 };
 
-*/
+
 
 
 const Project = require('../models/projectModel'); // Make sure the path is correct
