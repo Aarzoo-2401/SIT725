@@ -1,8 +1,12 @@
 const mongoose = require("mongoose");
-const projectService = require("./services/projectService");
+
+const projectService = require('./services/projectServices');  
 
 // Connect to MongoDB
 mongoose.connect("mongodb://localhost:27017/myprojectDB", {
+  // Removed the deprecated options
+
+
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });

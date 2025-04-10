@@ -1,3 +1,5 @@
+/*
+
 // services/projectService.js
 const Project = require('../models/projectModel');
 
@@ -12,4 +14,17 @@ const getAllProjects = async () => {
 
 module.exports = {
     getAllProjects,
+};
+
+*/
+
+
+const Project = require('../models/projectModel'); // Make sure the path is correct
+
+const insertProjects = (projects) => {
+  return Project.insertMany(projects);
+};
+
+module.exports = {
+  insertProjects,
 };

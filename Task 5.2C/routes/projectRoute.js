@@ -1,11 +1,11 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
-const projectController = require('../controllers/projectController');
+const Project = require('../models/project');
 
-// Route to fetch all projects
-router.get('/projects', projectController.getProjects);
 
-// Route to seed sample data
-router.get('/seed', projectController.seedProjects);
+router.get("/projects", async (req, res) => {
+  const projects = await Project.find();
+  res.json(projects);
+});
 
 module.exports = router;
