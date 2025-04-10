@@ -1,17 +1,4 @@
-const cardList = [
-    {
-    title: "Kitten 2",
-    image: "images/image4.jpg",
-    link: "About Kitten 2",
-    description: "Demo desciption about kitten 2"
-    },
-    {
-    title: "Kitten 3",
-    image: "images/image5.jpg",
-    link: "About Kitten 3",
-    description: "Demo desciption about kitten 3"
-    }
-    ]
+
     const clickMe = () => {
     alert("Thanks for clicking me. Hope you have a nice day!")
     }

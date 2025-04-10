@@ -1,19 +1,19 @@
 const mongoose = require('mongoose');
-
-mongoose.connect('mongodb://localhost:27017/SIT725', {
+ 
+mongoose.connect('mongodb://localhost:27017/myprojectDB', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
-
+ 
 const ProjectSchema = new mongoose.Schema({
   title: String,
   image: String,
   link: String,
   description: String,
 });
-
-const Project = mongoose.model('kittens', ProjectSchema);
-
+ 
+const Project = mongoose.model('Project', ProjectSchema);
+ 
 const sampleData = [
   {
     title: "Kitten 1",
@@ -28,7 +28,7 @@ const sampleData = [
     description: "Loves to nap in sunbeams",
   },
 ];
-
+ 
 Project.insertMany(sampleData)
   .then(() => {
     console.log("Sample data inserted");
