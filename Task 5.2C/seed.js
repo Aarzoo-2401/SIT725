@@ -30,6 +30,7 @@ mongoose.connection.on("connected", () => {
     },
   ];
 
+
   // Insert the sample data
   projectService.insertProjects(sampleData)
     .then(() => {
@@ -38,3 +39,5 @@ mongoose.connection.on("connected", () => {
     })
     .catch(err => console.error("Error inserting sample data:", err));
 });
+
+

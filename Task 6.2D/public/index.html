@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple Add Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Simple Add Calculator</h1>
+
+  <form id="calcForm">
+    <label for="a">Enter number A:</label>
+    <input type="number" id="a" name="a" required>
+
+    <label for="b">Enter number B:</label>
+    <input type="number" id="b" name="b" required>
+
+    <button type="submit">Calculate</button>
+  </form>
+
+  <h2 id="result"></h2>
+
+  <script>
+    document.getElementById("calcForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      const a = document.getElementById("a").value;
+      const b = document.getElementById("b").value;
+
+      fetch(`/add?a=${a}&b=${b}`)
+        .then(res => {
+          if (!res.ok) throw new Error("Invalid input or missing parameters");
+          return res.text();
+        })
+        .then(data => {
+          document.getElementById("result").innerText = data;
+        })
+        .catch(err => {
+          document.getElementById("result").innerText = "❌ " + err.message;
+        });
+    });
+  </script>
+</body>
+</html>
