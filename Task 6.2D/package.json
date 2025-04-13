@@ -1,0 +1,23 @@
+{
+  "name": "task-6.2d",
+  "version": "1.0.0",
+  "description": "SIT725 Testing Task",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "mocha --reporter spec"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.3.7",
+    "mocha": "^10.2.0",
+    "request": "^2.88.2"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "directories": {
+    "test": "test"
+  }
+}
