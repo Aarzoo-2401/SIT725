@@ -24,16 +24,21 @@
     document.getElementById("calcForm").addEventListener("submit", function(event) {
       event.preventDefault();
 
-      const a = document.getElementById("a").value;
-      const b = document.getElementById("b").value;
+      const aInput = document.getElementById("a").value.trim();
+      const bInput = document.getElementById("b").value.trim();
 
-      fetch(`/add?a=${a}&b=${b}`)
+      if (aInput === "" || bInput === "" || isNaN(aInput) || isNaN(bInput)) {
+        document.getElementById("result").innerText = "❌ Invalid input. Please enter valid numbers.";
+        return;
+      }
+
+      fetch(`/add?a=${encodeURIComponent(aInput)}&b=${encodeURIComponent(bInput)}`)
         .then(res => {
           if (!res.ok) throw new Error("Invalid input or missing parameters");
           return res.text();
         })
         .then(data => {
-          document.getElementById("result").innerText = data;
+          document.getElementById("result").innerText = "✅ Result: " + data;
         })
         .catch(err => {
           document.getElementById("result").innerText = "❌ " + err.message;
