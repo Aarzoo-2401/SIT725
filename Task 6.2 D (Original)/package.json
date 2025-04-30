@@ -1,0 +1,20 @@
+{
+  "name": "task-6.2-d-original",
+  "version": "1.0.0",
+  "main": "server.js",
+ "scripts": {
+  "test": "mocha \"test/**/*.js\"",
+  "start": "node server.js"
+},
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "mongoose": "^8.13.2"
+  },
+  "devDependencies": {
+  "chai": "^5.2.0",
+  "chai-http": "^4.3.0",
+  "mocha": "^11.1.0"
+}
+}
